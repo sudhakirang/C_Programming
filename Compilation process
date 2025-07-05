@@ -1,0 +1,32 @@
+#############1. Preprocessed File (.i)############
+This is the output after preprocessing (includes header files, macro expansion, etc.):
+gcc -E your_file.c -o your_file.i
+To check
+less your_file.i
+
+############2. Assembly File (.s)############
+This is the human-readable assembly code generated from the .c file:
+gcc -S your_file.c -o your_file.s
+
+To check:
+less your_file.s
+
+############3. Object File (.o)############
+This is the compiled, but not yet linked, binary object code:
+gcc -C your_file.c -o your_file.o
+
+To check:
+Less your_file.c
+objdump -d your_file.o       # Disassemble
+nm your_file.o               # List symbols
+file your_file.o             # Identify file type
+
+############4. Executable (ELF file)############
+This is the final linked executable file, typically ELF on Linux:
+gcc your_file.c -o your_file.elf
+
+To check: 
+file your_file.elf           # Check format (should say ELF)
+readelf -h your_file.elf     # ELF header info
+objdump -d your_file.elf     # Disassemble
+nm your_file.elf             # Symbol table
