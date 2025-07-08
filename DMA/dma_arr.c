@@ -17,6 +17,7 @@ int main()
     {
         scanf("%d",arr+i);
     }
+    
     printf("\nentered array elements are:\n");
     for(i=0;i<n;i++)
     {
