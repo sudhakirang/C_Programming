@@ -6,9 +6,11 @@ void call_by_reference(int *a, int *b){
     *b = temp;
     printf("the numbers after swapping are a = %d and b = %d", *a, *b);
 }
-int main()
+void main()
 {
-    int x,y;
-    
-    return 0;
+    int a,b;
+    printf("enter the values to swap\n");
+    scanf("%d%d",&a,&b);
+    printf("the values of variables before swapping are a = %d and b = %d\n",a,b);
+    call_by_reference(&a,&b);
 }
