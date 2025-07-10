@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-  int num;
+  int num,i, bit_count=0;
   printf("enter the number\n");
   scanf("%x",&num);
-  if((num & (num-1)) == 0)
+  for(i=0;i<sizeof(int)*8;i++)
   {
-    printf("the number is a power of 2\n");
+      if(((num>>i)&1) == 1)
+      {
+        bit_count++;
+      }
   }
-  else
-  {
-    printf("the number is not a power of two\n");
-  }
+  printf("the number of bits set in the given number is %d\n",bit_count);
   return 0;
 }
