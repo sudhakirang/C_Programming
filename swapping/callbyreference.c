@@ -4,7 +4,7 @@ void call_by_reference(int *a, int *b){
     temp = *a;
     *a = *b;
     *b = temp;
-    printf("the numbers after swapping are a = %d and b = %d", *a, *b);
+    printf("the numbers after swapping are a = %d and b = %d\n", *a, *b);
 }
 void main()
 {
