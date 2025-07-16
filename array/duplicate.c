@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int arr[100], n;
+    int n;
     int i, j, k;
     int isDuplicate;
+
 
     printf("Enter number of elements in the array: ");
     scanf("%d", &n);
 
+    int arr[n];
     printf("Enter %d elements:\n", n);
     for(i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
@@ -15,13 +17,13 @@ int main() {
 
     printf("\nDuplicate elements and their positions:\n");
 
-    int counted[100] = {0}; // Array to track already counted duplicates
-    int duplicateCount = 0;
+    int counted[10] = {0}; // Array to track already counted duplicates
+    int duplicateCount = 0; //counting the duplicate elements
 
     for(i = 0; i < n; i++) {
         if(counted[i]) continue; // Skip already counted duplicates
 
-        isDuplicate = 0;
+        isDuplicate = 0;      //flag intializing for the duplicate element identification.
 
         // Find duplicates
         for(j = i + 1; j < n; j++) {
