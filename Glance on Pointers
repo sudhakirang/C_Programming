@@ -1,0 +1,49 @@
+Pointer:
+In C programming, a pointer is a variable that stores the memory address of another variable. Instead of holding a value directly, a pointer points to the location in memory where a value is stored. This allows for efficient memory management and direct manipulation of memory in programs.
+
+Syntax:
+	• Declaring a pointer: type *pointer_name;
+	• Assigning an address to a pointer: pointer_name = &variable;
+	• Dereferencing a pointer: *pointer_name;
+	
+Example:
+int num = 10;   // Regular variable
+int *ptr = &num;  // Pointer storing the address of 'num'
+
+printf("%d", *ptr);  // Dereferencing pointer to get the value of 'num' (prints 10)
+
+
+Types of Pointers:
+	1. Void Pointer
+	2. Wild Pointer
+	3. Dangling Pointer
+	4. Null Pointer
+
+	1. Void Pointer:
+A void pointer is generic pointer, which can be used to point to any data type. But need a careful dereferencing. If not results will be in code crashing.
+Syntax: datatype *void_ptr_name ;
+Example: int x = 10;
+Void *void_ptr = &x;
+Note: i. Type cast to the correct data type before dereferencing. 
+	i. Size of the void pointer could be same as machine size 32-bit/64-bit.
+
+	2. Wild Pointer: 
+If a pointer is declared but not initialized with a proper address location, then that pointer is wild pointer.
+Syntax: datatype *wild_ptr_name;  //declared but not initialized
+Example: int *wild_ptr;
+	*wild_ptr = 10; //dangerous! It points to an unknown memory location.
+ 
+	3. Dangling Pointer:
+If a pointer is pointing to the memory location that has been deallocated or is no longer available (freed up location), then while differencing or accessing such a pointer leads to an undefined behavior or code crashes.
+
+Syntax/Example:
+int *var_ptr = (int *)malloc(5*sizeof(int));
+//program part
+free(var_ptr);
+ printf("%d\n",var_ptr);     //trying to print a value from a free DMA location.
+
+	4. Null Pointer: 
+Pointer does not pointing to any valid memory location. Explicitly set to '0' or 'NULL' indicate that it is not currently assigned to any object or memory. Used to check weather DMA creation done or not?
+Syntax: datatype *ptr = NULL;
+Example: int *ptr = NULL;
+
