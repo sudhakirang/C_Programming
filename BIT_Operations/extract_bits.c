@@ -4,7 +4,7 @@
 int main()
 {
     int num,mask=0,pos,mask_len,i;
-    printf("enter the number [number will consider it in the hexadecimal]:\n");
+    printf("enter the number [number will consider in the hexadecimal]:\n");
     scanf("%x",&num);
     printf("enter the position from which bit extraction required\n");
     scanf("%d",&pos);
