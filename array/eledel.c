@@ -6,7 +6,7 @@ int main(){
     printf("enter the position where the element is deleted\n");
     scanf("%d",&pos);
     for(i=pos;i<size-1;i++){
-          arr[i] = arr[i+1];
+          arr[i] = arr[i+1];            //left shift by one position
     }
     for(i=0;i<size-1;i++){
         printf("%d\t",arr[i]);
