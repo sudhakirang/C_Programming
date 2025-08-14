@@ -1,9 +1,11 @@
-/***WACP to find the lowest and highest ages in the given age array*****/
-/***compile time declersation of an array*****/
+/*******************************************************
+ * Program to find the lowest and highest ages 
+ * using a statically declared array
+ *******************************************************/
 #include <stdio.h>
 
 int main() {
-   // An array storing different ages 
+   // Statistically declared array of ages
   int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};   //even we can ask the user to enter array elements
   
   int i;
@@ -15,7 +17,7 @@ int main() {
   int lowestAge = ages[0];
   int highestAge = ages[0];
 
-  // Loop through the elements of the ages array to find the lowest & highet age
+  // Loop through the elements of the ages array to find the lowest & highest age
   for (i = 0; i < length; i++) {
   
     // Check if the current age is smaller than current the 'lowest age'
@@ -24,7 +26,7 @@ int main() {
       // If the smaller age is found, update 'lowest age' with that element
       lowestAge = ages[i];
     }
-    // Check if the current age is lesser than current the 'higest age'
+    // Check if the current age is greater than current the 'highest age'
     if (highestAge < ages[i])
     {
        // If the higher age is found, update 'highest age' with that element
@@ -41,15 +43,18 @@ int main() {
 
 
 
-/*******runtime decleration of an array********/
-/***WACP to find the lowest and highest ages in the given age array*****/
+/*******************************************************
+ * Program to find the lowest and highest ages 
+ * using a dynamically sized array based on user input
+ *******************************************************/
 #include <stdio.h>
 
 int main() {
-    int n;          //decides the length of the array from the user
-    printf("enter how many ages you want to check:\n");
-    scanf("%d",&n);
-    int ages[n];  //which decides the memory for the ages array based on the user input
+    int n;         
+    // Get the number of age entries from the user
+    printf("Enter how many ages you want to check: ");
+    scanf("%d", &n);
+    int ages[n];  //variable length array 
     int i;
     //ages input from the user
     printf("enter the ages:\n");
@@ -68,7 +73,7 @@ int main() {
   int lowestAge = ages[0];
   int highestAge = ages[0];
 
-  // Loop through the elements of the ages array to find the lowest & highet age
+  // Loop through the elements of the ages array to find the lowest & highest age
   for (i = 0; i < n; i++) {
   
     // Check if the current age is smaller than current the 'lowest age'
@@ -77,7 +82,7 @@ int main() {
       // If the smaller age is found, update 'lowest age' with that element
       lowestAge = ages[i];
     }
-    // Check if the current age is lesser than current the 'higest age'
+    // Check if the current age is greater than current the 'highest age'
     if (highestAge < ages[i])
     {
        // If the higher age is found, update 'highest age' with that element
