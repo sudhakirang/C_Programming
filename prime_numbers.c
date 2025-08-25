@@ -110,3 +110,51 @@ int main(){
     }
     return 0;
 }
+/**call by reference**/
+#include<stdio.h>
+void primenumrange(int *n, int *m){
+        int i,j,count;
+    for(i=*n;i<=*m;i++){
+        count = 0;
+        for(j=2;j<=i/2;j++){
+            if(i%j == 0){
+                count++;
+                break;
+            }
+        }
+        if(count == 0){
+            printf("%d\t",i);
+        }
+    }
+}
+int main(){
+    int n,m;
+    printf("enter the number upto which prime numbers has to print\n");
+    scanf("%d%d",&n,&m);
+    primenumrange(&n,&m);
+    return 0;
+}
+/**call by value**/
+#include<stdio.h>
+void primenumrange(int n, int m){
+        int i,j,count;
+    for(i=n;i<=m;i++){
+        count = 0;
+        for(j=2;j<=i/2;j++){
+            if(i%j == 0){
+                count++;
+                break;
+            }
+        }
+        if(count == 0){
+            printf("%d\t",i);
+        }
+    }
+}
+int main(){
+    int n,m;
+    printf("enter the number upto which prime numbers has to print\n");
+    scanf("%d%d",&n,&m);
+    primenumrange(n,m);
+    return 0;
+}
