@@ -1,3 +1,4 @@
+/****** find a number is prime or not********************/
 #include<stdio.h>
 #include<math.h>
 int main(){
@@ -23,6 +24,7 @@ int main(){
     }
     return 0;
 }
+/***************find a number is prime or not without using square root function************/
 #include<stdio.h>
 int main(){
     int num,count=0;
@@ -46,6 +48,7 @@ int main(){
     }
     return 0;
 }
+/*****************prime numbers upto a specific number****************/
 #include<stdio.h>
 int main(){
     int num;
@@ -68,27 +71,7 @@ int main(){
     printf("\nnumber of prime numbers below %d are %d\n",num,count_primes);
     return 0;
 }
-#include<stdio.h>
-int main(){
-    int num;
-    printf("enter the number upto which the prime numbers are required\n");
-    scanf("%d",&num);
-    int i,j,count=0,prime_flag=0;
-    for(i=2;prime_flag<num;i++){
-        count = 0;
-        for(j=2;j<=i/2;j++){
-            if(i%j==0){
-                count++;
-                break;
-            }
-        }
-        if(count == 0){
-            printf("%d\t",i);
-            prime_flag++;
-        }
-    }
-    return 0;
-}
+/***************prime numbers between two numbers****************/
 #include<stdio.h>
 int main(){
     int n,m;
