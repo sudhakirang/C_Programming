@@ -37,7 +37,7 @@ int main()
         n = n/2;
         i++;
     }
-    for(int a = i-1; i>=0; i--)
+    for(int a = i-1; a>=0; a--)
     {
         printf("%d",binary[a]);
     }
