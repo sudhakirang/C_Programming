@@ -1,3 +1,6 @@
+/**** Steps to implement the logic 
+    step1: insertion of an element in an array, first right shift the order by one time to till the position where new element has to insert
+    step2: then print the array ***********/
 #include<stdio.h>
 int main(){
     int arr[]={1,2,3,4,5,6,7,8,9};
