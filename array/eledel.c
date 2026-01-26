@@ -1,3 +1,6 @@
+/**** Steps to implement the logic 
+    step1: deletion of element in an array first left shift the order by one time from the deletion position
+    step2: then print the array ***********/
 #include<stdio.h>
 int main(){
     int arr[] = {1,2,3,4,5,6,7,8,9,10};
