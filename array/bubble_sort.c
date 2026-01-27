@@ -16,19 +16,25 @@ int main()
     {
         printf("%d\t",a[i]);
     }
-    for(i=0;i<n-1;i++)
+    for(i=0;i<n-1;i++)            //n-1 passes
     {
-        for(j=0;j<n-i-1;j++)
+        int swapped = 0;            //to check if already sorted or not
+        for(j=0;j<n-i-1;j++)        //n-i-1 comparisons
         {
-            if(a[j]>a[j+1])
+            if(a[j]>a[j+1])        //ascending order
             {
                 temp = a[j];
                 a[j] = a[j+1];
                 a[j+1] = temp;
+                swapped = 1;
             }
         }
+        if(!swapped){                //ealry exit if already sorted
+            printf("already sorted\n");
+            break;
+        }
     }
-    printf("\nthe odrered array elements are:\n");
+    printf("\nthe ordered array elements are:\n");
     for(i=0;i<n;i++)
     {
         printf("%d\t",a[i]);
