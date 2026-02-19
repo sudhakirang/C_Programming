@@ -38,7 +38,7 @@ void str_rev(char *src, char *dst)
         dst[i] = src[len - i - 1];
     }
 
-    dst[len] = '\0';   // IMPORTANT
+    dst[len] = '\0';   // IMPORTANT since Without this, %s printing causes undefined behavior.
 
     printf("Destination string is: %s\n", dst);
 }
